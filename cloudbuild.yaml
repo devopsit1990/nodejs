@@ -1,7 +1,7 @@
 steps:
 # Build the container image
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/kubernetes-411307/nodejs', '.']
+  args: ['build', '-t', 'gcr.io/us-docker.pkg.dev/kubernetes-411307/nodejs', '.']
 # Push the container image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/us-docker.pkg.dev/kubernetes-411307/docker/nodejs']
