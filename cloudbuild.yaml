@@ -1,7 +1,7 @@
 steps:
 # Build the container image
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/kubernetes-411307/docker', '.']
+  args: ['build', '-t', 'kubernetes-411307/docker', '.']
 # Push the container image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/kubernetes-411307/docker']
+  args: ['push', 'kubernetes-411307/docker']
