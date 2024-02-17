@@ -1,7 +1,7 @@
 steps:
 # Build the container image
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/kubernetes-411307/docker/nginx', '.']
+  args: ['build', '-t', 'us-east1-docker.pkg.dev/kubernetes-411307/docker/nginx', '.']
 # Push the container image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/kubernetes-411307/docker/nginx']
+  args: ['push', 'us-east1-docker.pkg.dev/kubernetes-411307/docker/nginx']
