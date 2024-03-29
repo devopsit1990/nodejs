@@ -38,9 +38,5 @@ jobs:
           tag: "v2" #Change version number e.g to 'v3' when updating application
     
   
-workflows:
-  build_update_deploy:
-    jobs:
-      - build
-     
+
       -
