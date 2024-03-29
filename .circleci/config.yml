@@ -34,12 +34,12 @@ jobs:
       - gcr/build-image:
           image: circle-gke
           tag: "v2" #Change version number e.g to 'v3' when updating application
-          registry-url: gcr.io/docker/circle-gke
+          registry-url: gcr.io.docker
       
       - gcr/push-image:
           image: circle-gke
           tag: "v2" #Change version number e.g to 'v3' when updating application
-          registry-url: gcr.io/docker/circle-gke
+          registry-url: gcr.io.docker
    
 workflows:
   commit:
