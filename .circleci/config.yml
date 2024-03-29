@@ -33,12 +33,12 @@ jobs:
       - gcr/gcr-auth
       - gcr/build-image:
           image: nginx
-          registry-url: us-central1-docker.pkg.dev/kubernetes-411307/docker/nginx
+          registry-url: us-central1-docker.pkg.dev/kubernetes-411307/docker
           
           
       - gcr/push-image:
           image: nginx
-          registry-url: us-central1-docker.pkg.dev/kubernetes-411307/docker/nginx
+          registry-url: us-central1-docker.pkg.dev/kubernetes-411307/docker
          
           
    
