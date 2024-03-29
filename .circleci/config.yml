@@ -37,19 +37,7 @@ jobs:
           image: circle-gke
           tag: "v2" #Change version number e.g to 'v3' when updating application
     
-  deploy:
-    description: Deploy application to Google Kubernetes Engine
-    machine: true
-    steps:
-      # Install `gcloud` and `kubectl` if not already installed.
-      - gcp-gke/install
-      # Initialize the `gcloud` CLI.
-      - gcp-gke/init
-      # Update a deployment Docker image.
-      - gcp-gke/rollout-image:
-          deployment: circle-ci-cluster
-          container: dominic-backend
-          image: gcr.io/circle-ci-demo/circle-gke:v2 # change version when updating
+  
 workflows:
   build_update_deploy:
     jobs:
@@ -57,6 +45,4 @@ workflows:
       - Build-Push-Image-Docker:
           requires:
             - build
-      - deploy:
-          requires:
-            - Build-Push-Image-Docker
+      -
