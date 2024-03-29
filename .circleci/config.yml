@@ -32,12 +32,12 @@ jobs:
       - checkout
       - gcr/gcr-auth
       - gcr/build-image:
-          image: circle-gke
+          image: nginx
           registry-url: us-central1-docker.pkg.dev/kubernetes-411307/docker/
           
           
       - gcr/push-image:
-          image: circle-gke
+          image: nginx
           registry-url: us-central1-docker.pkg.dev/kubernetes-411307/docker/
          
           
