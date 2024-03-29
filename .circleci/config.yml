@@ -31,14 +31,14 @@ jobs:
     steps:
       - checkout
       - gcr/gcr-auth
+      - run 
+         command: |
+            gcloud auth configure-docker  us-central1-docker.pkg.dev
       - gcr/build-image:
           image: circle-gke
           tag: "v2" #Change version number e.g to 'v3' when updating application
           registry-url: us-central1-docker.pkg.dev/kubernetes-411307/docker
-      - run:
-         name: Configure Docker with gcloud CLI Credential Helper
-        command: |
-          gcloud auth configure-docker  us-central1-docker.pkg.dev
+      
       - gcr/push-image:
           image: circle-gke
           tag: "v2" #Change version number e.g to 'v3' when updating application
